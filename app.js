@@ -38,9 +38,9 @@ class SecurionPayService {
 
     async subscribeToPlan(customer, plan) {
         await securionpay.subscriptions.create(customer.id, {
-            "planId": plan.id
-        }).then(function (date) {
-            console.log(date);
+            'planId': plan.id
+        }).then(result => {
+            console.log(result);
         });
     }
 
